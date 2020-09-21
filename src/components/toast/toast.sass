@@ -1,0 +1,26 @@
+.toast-success
+  background-color: #76AC60
+  padding: 10px 30px
+  font-size: 18px
+  color: white
+  border-radius: 5px
+  box-shadow: 5px 10px 8px #888888;
+  position: absolute
+  top: 10%
+  left: 50%
+  transform: translate(-50%,-50%)
+  opacity: 0
+
+  span
+    font-weight: bold
+  
+.toast-success.fadeOut
+  opacity: 0
+  transition: opacity 2s ease
+
+.toast-success.fadeIn
+  opacity: 1
+  transition: opacity 2s ease
+
+  span
+    font-weight: bold

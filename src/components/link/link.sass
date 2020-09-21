@@ -1,0 +1,60 @@
+.link-container
+  display: flex
+  margin-top: 20px
+  position: relative
+  padding: 10px
+  border-radius: 5px
+
+  &:hover
+    cursor: pointer
+    background-color: rgba(211, 211, 211, 0.4)
+    > .delete-icon
+      display: block
+  
+  .link-points
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    background-color: rgba(211,211,211, .4)
+    border-radius: 5px
+    padding: 10px
+    border: 1px solid #ccc
+    flex-direction: column
+
+    span
+      font-weight: bold
+      font-size: 30px
+
+  .link-details
+    display: flex
+    flex-direction: column
+    margin-left: 10px
+    color: #ccc
+    width: 100%
+    overflow: hidden
+
+    .link-title
+      font-size: 18px
+      color: black
+      font-weight: bold
+
+    .link-vote-container
+      display: flex
+      justify-content: space-between
+      margin-top: auto
+      margin-bottom: 5px
+      font-weight: bold
+
+      .link-vote
+        &:hover
+          cursor: pointer
+        svg
+          margin-right: 5px
+
+  .delete-icon
+    width: auto
+    height: 25px
+    position: absolute
+    right: -5px
+    top: -12.5px
+    display: none
