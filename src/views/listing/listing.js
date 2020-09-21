@@ -105,11 +105,7 @@ const Listing = () => {
 
   return (
     <div className="listing-container">
-      <SubmitLink
-        onClick={() => {
-          window.location.href = "/new";
-        }}
-      ></SubmitLink>
+      <SubmitLink></SubmitLink>
       <div className="horizontal-line"></div>
       <OrderByDropdown onChangeDropdown={onChangeDropdown}></OrderByDropdown>
       {generateLinks()}

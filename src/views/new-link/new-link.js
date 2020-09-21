@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import {
+  Link
+} from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Toast from "../../components/toast/toast";
 import "./new-link.sass";
@@ -9,10 +12,6 @@ const NewLink = () => {
   const [linkUrl, setLinkUrl] = useState("");
   const [isButtonClickable, setIsButtonClickable] = useState(true);
   const [isToastActive, setIsToastActive] = useState(false);
-
-  const returnToListing = () => {
-    window.location.href = "/";
-  };
 
   const onToastClosed = () => {
     setIsToastActive(false);
@@ -66,10 +65,12 @@ const NewLink = () => {
   return (
     <>
       <div className="new-link-container">
-        <div className="return-to-listing" onClick={returnToListing}>
-          <FontAwesomeIcon icon={faArrowLeft} className="icon" />
-          Return To List
-        </div>
+        <Link to="/">
+          <div className="return-to-listing">
+            <FontAwesomeIcon icon={faArrowLeft} className="icon" />
+            Return To List
+          </div>
+        </Link>
         <h1>Add New Link</h1>
         <span>Link Name:</span>
         <input
